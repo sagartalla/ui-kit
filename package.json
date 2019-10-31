@@ -1,7 +1,10 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "acko-ui-kit",
+  "version": "1.0.2",
   "devDependencies": {
     "lerna": "^3.18.3"
+  },
+  "scripts": {
+    "tsc": "tsc"
   }
 }
