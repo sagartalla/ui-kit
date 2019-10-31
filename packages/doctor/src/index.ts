@@ -1,5 +1,5 @@
 const t: Function = () => {
-    console.log('doctor');
+    console.log('doctor 2');
 }
 
 export default t;
