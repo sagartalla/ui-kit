@@ -1,0 +1,30 @@
+{
+  "name": "card",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Sagar Talla <talla.sagar@hotmail.com>",
+  "homepage": "https://github.com/sagartalla/ui-kit#readme",
+  "license": "ISC",
+  "main": "lib/card.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagartalla/ui-kit.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/sagartalla/ui-kit/issues"
+  },
+  "dependencies": {
+    "@acko-ui-kit/common": "^2.0.0"
+  }
+}
