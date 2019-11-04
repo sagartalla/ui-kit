@@ -1,7 +1,7 @@
 import * as common from '@acko-ui-kit/common';
 import { Link } from 'react-router-dom';
 const {
-	styled, 
+  styled, 
   css,
   $fontSize,
   $primaryColors,

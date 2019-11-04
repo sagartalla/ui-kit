@@ -2,6 +2,7 @@ import * as styledComponents from 'styled-components';
 
 // theme.ts
 // your theme variables
+//
 export interface ThemeInterface {
   primaryColor: DataProps;
   lightWeight: number;
