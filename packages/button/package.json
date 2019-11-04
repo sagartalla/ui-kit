@@ -1,11 +1,11 @@
 {
-  "name": "@acko-ui-kit/doctor",
-  "version": "3.0.0",
+  "name": "@acko-ui-kit/button",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Sagar Talla <talla.sagar@hotmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
   "license": "ISC",
-  "main": "lib/doctor.js",
+  "main": "lib/button.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

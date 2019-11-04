@@ -1,11 +1,11 @@
 {
-  "name": "@acko-ui-kit/doctor",
-  "version": "3.0.0",
+  "name": "@acko-ui-kit/common",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Sagar Talla <talla.sagar@hotmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
   "license": "ISC",
-  "main": "lib/doctor.js",
+  "main": "lib/common.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -25,7 +25,7 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/common": "^1.0.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^4.4.1"
   }
 }
