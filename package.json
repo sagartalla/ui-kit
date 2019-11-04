@@ -6,6 +6,6 @@
   },
   "scripts": {
     "tsc": "lerna run tsc",
-    "publish": "lerna run tsc && lerna run publish"
+    "publish": "lerna run tsc && lerna publish"
   }
 }
