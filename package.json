@@ -5,6 +5,7 @@
     "lerna": "^3.18.3"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "lerna run tsc",
+    "publish": "lerna run tsc && lerna run publish"
   }
 }
