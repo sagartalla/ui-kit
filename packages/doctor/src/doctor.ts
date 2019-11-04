@@ -5,7 +5,7 @@ const { styled } =  common;
 console.log(styled.a);
 
 const t: Function = () => {
-    console.log('doctor 2');
+    console.log('doctor 3');
 }
 
 export default t;
