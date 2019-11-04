@@ -142,6 +142,6 @@ function FormikInput(props: Props) {
       )}
     />
   );
-}
+};
 
 export default FormikInput;
