@@ -1,2 +1,3 @@
+import FormikInput from './InputComponent/FormikInput';
 export * from './InputComponent/FormikInput';
-export { default as FormikInput } from './InputComponent/FormikInput';
+export default FormikInput;
