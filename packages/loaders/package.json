@@ -28,8 +28,7 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/common": "^2.0.0",
-    "formik": "^2.0.3"
+    "@acko-ui-kit/common": "^2.0.0"
   },
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
