@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const form = require('@acko-ui-kit/form');
+import FormikInput from '@acko-ui-kit/form'
 
 // TODO: DEMONSTRATE API
 ```
