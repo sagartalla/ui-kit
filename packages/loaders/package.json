@@ -5,7 +5,7 @@
   "author": "Sagar Talla <talla.sagar@hotmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
   "license": "ISC",
-  "main": "lib/form.js",
+  "main": "lib/loaders.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
