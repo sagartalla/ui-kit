@@ -3,7 +3,7 @@ import * as common from '@acko-ui-kit/common';
 
 import { Text } from '@acko-ui-kit/typography';
 import Button from '@acko-ui-kit/button';
-import React from 'react';
+import * as React from 'react';
 
 const {
   styled,

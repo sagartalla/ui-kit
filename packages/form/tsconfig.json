@@ -3,7 +3,9 @@
     "compilerOptions": {
       "baseUrl": ".",
       "outDir": "./lib",
-      "lib": ["es6", "dom"],
+      "target": "es5",
+      "module": "commonjs",
+      "lib": ["dom", "es5", "es6", "es7", "es2017"],
       "sourceMap": true,
       "jsx": "react",
       "skipLibCheck": true,
