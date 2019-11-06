@@ -10,6 +10,7 @@
 
 #### Add new package 
 `lerna create @acko-ui-kit/<package-name>`
+add tsconfig.json // copy from existing package.
 
 
 #### Install dependency in a package
