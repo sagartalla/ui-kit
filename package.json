@@ -7,6 +7,7 @@
   },
   "scripts": {
     "tsc": "lerna run tsc",
-    "publish": "lerna run tsc && lerna publish"
+    "publish": "lerna run tsc && lerna publish",
+    "bootstrap": "lerna bootstrap"
   }
 }
