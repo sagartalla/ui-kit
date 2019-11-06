@@ -1,6 +1,6 @@
 {
   "name": "@acko-ui-kit/layout",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "> TODO: description",
   "author": "Sagar Talla <talla.sagar@hotmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
@@ -28,7 +28,7 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/common": "^2.1.1",
+    "@acko-ui-kit/common": "^2.1.2",
     "typescript": "^3.7.2"
   },
   "gitHead": "e2306cfa968f58dd9cd21a889045c10bb1581a70"
