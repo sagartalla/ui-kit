@@ -28,6 +28,7 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/common": "^2.1.0"
+    "@acko-ui-kit/common": "^2.1.0",
+    "typescript": "^3.7.2"
   }
 }

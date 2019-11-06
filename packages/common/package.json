@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "react-router-dom": "^5.1.2",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "typescript": "^3.7.2"
   }
 }

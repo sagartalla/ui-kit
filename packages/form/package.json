@@ -31,7 +31,8 @@
     "@acko-ui-kit/button": "^2.1.0",
     "@acko-ui-kit/common": "^2.1.0",
     "@acko-ui-kit/typography": "^1.1.0",
-    "formik": "^2.0.3"
+    "formik": "^2.0.3",
+    "typescript": "^3.7.2"
   },
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
