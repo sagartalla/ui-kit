@@ -13,6 +13,7 @@
 lerna create @acko-ui-kit/<package-name>
 ```
 add tsconfig.json // copy from existing package.
+add script "tsc":"tsc" in package.json of the new package
 
 #### Install dependency in a package
 ```
