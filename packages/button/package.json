@@ -1,6 +1,6 @@
 {
   "name": "@acko-ui-kit/button",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "> TODO: description",
   "author": "Sagar Talla <talla.sagar@hotmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
@@ -25,7 +25,7 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/common": "^2.1.0",
+    "@acko-ui-kit/common": "^2.1.1",
     "react-router-dom": "^5.1.2",
     "typescript": "^3.7.2"
   }
