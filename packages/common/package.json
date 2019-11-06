@@ -28,5 +28,6 @@
     "react-router-dom": "^5.1.2",
     "styled-components": "^4.4.1",
     "typescript": "^3.7.2"
-  }
+  },
+  "gitHead": "e2306cfa968f58dd9cd21a889045c10bb1581a70"
 }
