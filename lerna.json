@@ -9,7 +9,7 @@
         "ignored-file"
       ],
       "message": "chore(release): publish",
-      "registry": "http://localhost:4873/"
+      "registry": "http://172.31.43.156:8080/repository/npm-internal/"
     },
     "bootstrap": {
       "ignore": "component-*",
