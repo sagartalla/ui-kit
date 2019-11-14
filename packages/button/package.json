@@ -25,7 +25,11 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/common": "^2.1.2",
+    "@acko-ui-kit/common": "^0.0.0",
+    "@types/prop-types": "^15.7.3",
+    "@types/react": "^16.9.11",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "typescript": "^3.7.2"
   },
