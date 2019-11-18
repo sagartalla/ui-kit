@@ -25,3 +25,10 @@ lerna bootstrap --hoist // moves common packages to top most level and creates l
 ```
 npm run publish
 ```
+
+
+### Usage
+```
+//.npmrc
+@acko-ui-kit:registry=http://172.31.43.156:8080/repository/npm-internal
+```
