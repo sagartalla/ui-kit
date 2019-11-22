@@ -1,6 +1,6 @@
 {
   "name": "@acko-ui-kit/toast",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "> TODO: description",
   "author": "Sagar Talla <talla.sagar@hotmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
@@ -32,5 +32,6 @@
     "@acko-ui-kit/typography": "^1.0.0",
     "@types/react": "^16.9.11",
     "react": "^16.12.0"
-  }
+  },
+  "gitHead": "f9dab4422e188f153a700075a4c454aa82e81b54"
 }
