@@ -103,7 +103,6 @@ function FormikInput(props: Props) {
   const isTextArea = textarea;
   const InputComponent = isTextArea ? InputTextArea : InputBasic;
   const shouldValidateOnBlur = validateOnBlur !== false;
-  // const `validateOnChange` = name === 'email'
   return (
     <Formik
       initialValues={{ [name]: initialValue }}
