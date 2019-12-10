@@ -32,28 +32,7 @@ interface TextProps {
 }
 
 function getFontSize(size) {
-  let fontSize;
-  switch (size) {
-    case 'xxxs':
-      fontSize = $fontSize.xxxs;
-      break;
-    case 'xxs':
-      fontSize = $fontSize.xxs;
-      break;
-    case 'xs':
-      fontSize = $fontSize.xs;
-      break;
-    case 'n':
-      fontSize = $fontSize.normal;
-      break;
-    case 's':
-      fontSize = $fontSize.small;
-      break;
-
-    default:
-      fontSize = $fontSize.normal;
-  }
-  return fontSize;
+  return $fontSize[size || 'normal'];
 }
 
 function getFontColorVariant(colorVariant) {
