@@ -1,6 +1,6 @@
-import React from 'react';
-import * as common from '@acko-ui-kit/common';
-import { Text } from '@acko-ui-kit/typography';
+import * as React from "react";
+import * as common from "@acko-ui-kit/common";
+import { Text } from "@acko-ui-kit/typography";
 
 const { styled } = common;
 
@@ -16,7 +16,7 @@ const Wrapper = styled.div<StyleProps>`
   white-space: nowrap;
   text-align: center;
   padding: 0.5em 1.5em;
-  visibility: ${(props: any) => (props.visible ? 'visible' : 'hidden')};
+  visibility: ${(props: any) => (props.visible ? "visible" : "hidden")};
   z-index: 2;
 `;
 

@@ -2,8 +2,8 @@
   "name": "acko-ui-kit",
   "version": "1.0.0",
   "devDependencies": {
-    "lerna": "^3.18.3",
-    "typescript": "^3.7.2"
+    "lerna": "3.18.3",
+    "typescript": "3.7.2"
   },
   "scripts": {
     "tsc": "lerna run tsc",

@@ -1,9 +1,10 @@
-import { Formik } from 'formik';
-import * as common from '@acko-ui-kit/common';
+// @flow
+import { Formik } from "formik";
+import * as common from "@acko-ui-kit/common";
 
-import { Text } from '@acko-ui-kit/typography';
-import Button from '@acko-ui-kit/button';
-import * as React from 'react';
+import { Text } from "@acko-ui-kit/typography";
+import Button from "@acko-ui-kit/button";
+import * as React from "react";
 
 const {
   styled,
@@ -13,12 +14,13 @@ const {
   $error,
   $primaryColors,
   $fontWeightNormal,
-  $space,
+  $space
 } = common;
 
 interface Props {
   initialValue?: string;
   name: string;
+  type?: string;
   placeholder?: string;
   textarea?: boolean;
   validate: (values: { [x: string]: string }) => object;
@@ -26,10 +28,13 @@ interface Props {
   handleNext(value: string | undefined): void;
   asyncErrors?: string;
   validateOnBlur?: boolean;
+  autocapitalize?: boolean;
 }
 
 interface InputBasicProps {
-  isError: boolean | undefined | '';
+  isError: boolean | undefined | "";
+  autoFocus: boolean;
+  autocapitalize?: boolean;
 }
 
 const inputStyles = `
@@ -56,6 +61,8 @@ const InputBasic = styled.input<InputBasicProps>`
   ${inputStyles}
   border: 1px solid ${(props: any) =>
     props.isError ? $error : $neutralColors.lightest};
+  text-transform: ${(props: any) =>
+    props.autocapitalize ? "uppercase" : "inherit"};
 `;
 
 const InputTextArea = styled.textarea`
@@ -82,6 +89,7 @@ const ButtonContainer = styled(Box)`
 function FormikInput(props: Props) {
   const {
     name,
+    type,
     initialValue,
     placeholder,
     textarea,
@@ -90,11 +98,11 @@ function FormikInput(props: Props) {
     handleNext,
     asyncErrors,
     validateOnBlur,
+    autocapitalize
   } = props;
   const isTextArea = textarea;
   const InputComponent = isTextArea ? InputTextArea : InputBasic;
   const shouldValidateOnBlur = validateOnBlur !== false;
-  // const `validateOnChange` = name === 'email'
   return (
     <Formik
       initialValues={{ [name]: initialValue }}
@@ -112,17 +120,20 @@ function FormikInput(props: Props) {
         handleChange,
         handleBlur,
         handleSubmit,
-        isSubmitting,
+        isSubmitting
       }) => (
         <form onSubmit={handleSubmit}>
           <InputComponent
             id={name}
+            type={type || "text"}
+            autoFocus
             placeholder={placeholder}
             name={name}
             value={values[name]}
             onChange={handleChange}
             onBlur={handleBlur}
             isError={errors[name] && touched[name]}
+            autocapitalize={autocapitalize}
           />
           {errors[name] && touched[name] && (
             <ErrorText size="xxs">{errors[name]}</ErrorText>
@@ -142,6 +153,6 @@ function FormikInput(props: Props) {
       )}
     />
   );
-};
+}
 
 export default FormikInput;
