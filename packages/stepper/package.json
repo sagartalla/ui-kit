@@ -1,6 +1,6 @@
 {
   "name": "@acko-ui-kit/stepper",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "> TODO: description",
   "author": "cp-ankush <cpankush7@gmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
@@ -28,8 +28,8 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/common": "^1.0.6",
-    "@acko-ui-kit/typography": "^1.0.5",
+    "@acko-ui-kit/common": "^1.0.8",
+    "@acko-ui-kit/typography": "^1.0.6",
     "@types/react": "^16.9.11",
     "react": "^16.12.0"
   }
