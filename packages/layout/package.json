@@ -1,6 +1,6 @@
 {
   "name": "@acko-ui-kit/layout",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "Sagar Talla <talla.sagar@hotmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
@@ -28,7 +28,7 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/common": "^1.0.4",
+    "@acko-ui-kit/common": "^1.0.6",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.11",
     "prop-types": "^15.7.2",
