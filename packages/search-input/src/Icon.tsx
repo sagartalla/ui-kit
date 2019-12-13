@@ -1,7 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
+import { styled } from "@acko-ui-kit/common";
 
-const f:Function = () => ({
-    __html: `<?xml version="1.0" encoding="UTF-8"?>
+const f: Function = () => ({
+  __html: `<?xml version="1.0" encoding="UTF-8"?>
     <svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: sketchtool 55.2 (78181) - https://sketchapp.com -->
         <title>0A266906-753B-4A95-90A7-5ECB6673090C@3x</title>
@@ -19,11 +20,15 @@ const f:Function = () => ({
                 </g>
             </g>
         </g>
-    </svg>`    
+    </svg>`
 });
 
-const Img = () => {
-    return (<span dangerouslySetInnerHTML={f()}/>);
-}
+const StyledSpan = styled.span`
+  ${(props: any) => props.styles}
+`;
+
+const Img = ({ styles }: any) => {
+  return <StyledSpan styles={styles} dangerouslySetInnerHTML={f()} />;
+};
 
 export default Img;

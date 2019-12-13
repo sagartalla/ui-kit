@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { debounce } from 'lodash';
-import * as common from '@acko-ui-kit/common';
-import SearchIcon from './Icon';
+import * as React from "react";
+import { debounce } from "lodash";
+import * as common from "@acko-ui-kit/common";
+import SearchIcon from "./Icon";
 
 const {
-  styled, 
-  $neutralColors, 
+  styled,
+  $neutralColors,
   $primaryColors,
   $grayLight,
   $fontSize,
-  $error,
+  $error
 } = common;
 
 const StyledInput = styled.input<StypeProps>`
@@ -23,7 +23,8 @@ const StyledInput = styled.input<StypeProps>`
   padding-left: 45px;
   :focus {
     outline: none;
-    border: 1px solid ${(props: StypeProps) => (props.error ? $error : $primaryColors.normal)};
+    border: 1px solid
+      ${(props: StypeProps) => (props.error ? $error : $primaryColors.normal)};
   }
 `;
 
@@ -31,7 +32,7 @@ const Container = styled.div`
   position: relative;
 `;
 
-const StyledSearchIcon = styled(SearchIcon)`
+const styledSearchIcon = `
   position: absolute;
   left: 17px;
   top: 17px;
@@ -42,7 +43,7 @@ export default function SearchInput(props: ComponentProps) {
     props.handleChange(value);
   }, 1000);
 
-  const onInputChange = (event:any) => {
+  const onInputChange = (event: any) => {
     event.persist();
     delayedCallback(event.target.value);
   };
@@ -54,7 +55,7 @@ export default function SearchInput(props: ComponentProps) {
         type="text"
         placeholder={props.placeholder}
       />
-      <StyledSearchIcon />
+      <SearchIcon styles={styledSearchIcon} />
     </Container>
   );
 }

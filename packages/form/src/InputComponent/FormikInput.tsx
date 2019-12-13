@@ -51,7 +51,7 @@ font-weight: ${$fontWeightNormal};
   border: 1px solid ${$primaryColors.light};
 }
 &::-webkit-input-placeholder {
-  color: ${$neutralColors.light};
+  color: ${$neutralColors.lightest};
   font-size: ${$fontSize.normal};
   text-align: center;
 }
