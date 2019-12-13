@@ -1,6 +1,6 @@
 {
   "name": "@acko-ui-kit/form",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "> TODO: description",
   "author": "Sagar Talla <talla.sagar@hotmail.com>",
   "homepage": "https://github.com/sagartalla/ui-kit#readme",
@@ -28,9 +28,9 @@
     "url": "https://github.com/sagartalla/ui-kit/issues"
   },
   "dependencies": {
-    "@acko-ui-kit/button": "^1.0.5",
-    "@acko-ui-kit/common": "^1.0.8",
-    "@acko-ui-kit/typography": "^1.0.6",
+    "@acko-ui-kit/button": "^1.0.6",
+    "@acko-ui-kit/common": "^1.0.10",
+    "@acko-ui-kit/typography": "^1.0.7",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.11",
     "formik": "^2.0.3",
