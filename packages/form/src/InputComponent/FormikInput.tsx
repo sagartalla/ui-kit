@@ -116,7 +116,15 @@ function FormikInput(props: Props) {
         isSubmitting
       }) =>
         customInput ? (
-          customInput()
+          customInput({
+            values,
+            touched,
+            errors,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            isSubmitting
+          })
         ) : (
           <form onSubmit={handleSubmit}>
             <InputComponent
