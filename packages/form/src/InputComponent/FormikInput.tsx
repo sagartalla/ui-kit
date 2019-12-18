@@ -1,11 +1,9 @@
 // @flow
 import { Formik } from "formik";
 import * as common from "@acko-ui-kit/common";
-
 import { Text } from "@acko-ui-kit/typography";
 import Button from "@acko-ui-kit/button";
 import * as React from "react";
-
 const {
   styled,
   Box,
@@ -16,7 +14,6 @@ const {
   $fontWeightNormal,
   $space
 } = common;
-
 interface Props {
   initialValue?: string;
   name: string;
@@ -29,14 +26,14 @@ interface Props {
   asyncErrors?: string;
   validateOnBlur?: boolean;
   autocapitalize?: boolean;
+  customInput?: Function;
+  [props: string]: any;
 }
-
 interface InputBasicProps {
   isError: boolean | undefined | "";
   autoFocus: boolean;
   autocapitalize?: boolean;
 }
-
 const inputStyles = `
 height: 40px;
 width: 100%;
@@ -51,12 +48,11 @@ font-weight: ${$fontWeightNormal};
   border: 1px solid ${$primaryColors.light};
 }
 &::-webkit-input-placeholder {
-  color: ${$neutralColors.lightest};
+  color: ${$neutralColors.light};
   font-size: ${$fontSize.normal};
   text-align: center;
 }
 `;
-
 const InputBasic = styled.input<InputBasicProps>`
   ${inputStyles}
   border: 1px solid ${(props: any) =>
@@ -64,13 +60,11 @@ const InputBasic = styled.input<InputBasicProps>`
   text-transform: ${(props: any) =>
     props.autocapitalize ? "uppercase" : "inherit"};
 `;
-
 const InputTextArea = styled.textarea`
   ${inputStyles};
   height: inherit;
   padding-left: 1em;
 `;
-
 const ErrorText = styled(Text)`
   width: 90%;
   color: ${$error};
@@ -78,14 +72,12 @@ const ErrorText = styled(Text)`
   margin: ${$space.xs} auto 0;
   text-align: center;
 `;
-
 const ButtonContainer = styled(Box)`
   width: 100%;
   margin-top: ${$space.sm};
   display: flex;
   justify-content: center;
 `;
-
 function FormikInput(props: Props) {
   const {
     name,
@@ -98,7 +90,9 @@ function FormikInput(props: Props) {
     handleNext,
     asyncErrors,
     validateOnBlur,
-    autocapitalize
+    autocapitalize,
+    customInput,
+    ...restProps
   } = props;
   const isTextArea = textarea;
   const InputComponent = isTextArea ? InputTextArea : InputBasic;
@@ -110,7 +104,6 @@ function FormikInput(props: Props) {
       validateOnBlur={shouldValidateOnBlur}
       onSubmit={(values, actions) => {
         handleNext(values[name]);
-
         actions.setSubmitting(false);
       }}
       render={({
@@ -121,38 +114,42 @@ function FormikInput(props: Props) {
         handleBlur,
         handleSubmit,
         isSubmitting
-      }) => (
-        <form onSubmit={handleSubmit}>
-          <InputComponent
-            id={name}
-            type={type || "text"}
-            autoFocus
-            placeholder={placeholder}
-            name={name}
-            value={values[name]}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            isError={errors[name] && touched[name]}
-            autocapitalize={autocapitalize}
-          />
-          {errors[name] && touched[name] && (
-            <ErrorText size="xxs">{errors[name]}</ErrorText>
-          )}
-          {asyncErrors && <ErrorText size="xxs">{asyncErrors}</ErrorText>}
-          <ButtonContainer>
-            {/** TODO: button disabled state might needs to be updated if UI mocks updates */}
-            <Button
-              type="submit"
-              // disabled={isSubmitting || values[name] === ''}
-              disabled={isSubmitting}
-            >
-              {buttonText}
-            </Button>
-          </ButtonContainer>
-        </form>
-      )}
+      }) =>
+        customInput ? (
+          customInput()
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <InputComponent
+              id={name}
+              type={type || "text"}
+              autoFocus
+              placeholder={placeholder}
+              name={name}
+              value={values[name]}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              isError={errors[name] && touched[name]}
+              autocapitalize={autocapitalize}
+            />
+            {errors[name] && touched[name] && (
+              <ErrorText size="xxs">{errors[name]}</ErrorText>
+            )}
+            {asyncErrors && <ErrorText size="xxs">{asyncErrors}</ErrorText>}
+            <ButtonContainer>
+              {/** TODO: button disabled state might needs to be updated if UI mocks updates */}
+              <Button
+                type="submit"
+                // disabled={isSubmitting || values[name] === ''}
+                disabled={isSubmitting}
+              >
+                {buttonText}
+              </Button>
+            </ButtonContainer>
+          </form>
+        )
+      }
+      {...restProps}
     />
   );
 }
-
 export default FormikInput;
