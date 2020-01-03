@@ -22,7 +22,7 @@ import Button, {
   HyperLink
 } from "../src/button";
 
-storiesOf("Button", module)
+(storiesOf("Button", module) as any)
   .addDecorator(withKnobs)
   .addDecorator(withNotes)
   .addDecorator(story => (
@@ -33,7 +33,7 @@ storiesOf("Button", module)
       {story()}
     </MemoryRouter>
   ))
-  .add(
+  .addWithJSX(
     "Default Button",
     () => (
       <Button
@@ -49,7 +49,7 @@ storiesOf("Button", module)
     ),
     { notes: "A very simple component" }
   )
-  .add("Button Text", () => (
+  .addWithJSX("Button Text", () => (
     <ButtonText
       small={text("Small", "false")}
       onClick={action("clicked button")}
@@ -57,7 +57,7 @@ storiesOf("Button", module)
       Click Me!
     </ButtonText>
   ))
-  .add("Button Link", () => (
+  .addWithJSX("Button Link", () => (
     <ButtonLink
       to="/new-link"
       fluid={boolean("Fluid", false)}
@@ -70,7 +70,7 @@ storiesOf("Button", module)
       Link
     </ButtonLink>
   ))
-  .add("Anchor Link Button", () => (
+  .addWithJSX("Anchor Link Button", () => (
     <AnchorLinkButton
       fluid={boolean("Fluid", false)}
       small={text("Small", "false")}
@@ -82,7 +82,7 @@ storiesOf("Button", module)
       Hello Button
     </AnchorLinkButton>
   ))
-  .add("Hyper Anchor Link Button", () => (
+  .addWithJSX("Hyper Anchor Link Button", () => (
     <HyperAnchorLink
       small={text("Small", "false")}
       chevron={text("Chevron", "false")}
@@ -91,7 +91,7 @@ storiesOf("Button", module)
       Click Me!
     </HyperAnchorLink>
   ))
-  .add("HyperLink button", () => (
+  .addWithJSX("HyperLink button", () => (
     <HyperLink
       to="/new-link"
       small={text("Small", "false")}
