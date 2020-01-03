@@ -1,7 +1,7 @@
-import * as common from '@acko-ui-kit/common';
-import { Link } from 'react-router-dom';
+import * as common from "@acko-ui-kit/common";
+import { Link } from "react-router-dom";
 const {
-  styled, 
+  styled,
   css,
   $fontSize,
   $primaryColors,
@@ -9,8 +9,8 @@ const {
   $white,
   $fontWeightNormal,
   $fontWeightBold,
-  $hyperlink,
-} = common ;
+  $hyperlink
+} = common;
 
 const getBackgroundColor = () => props => {
   if (props.disabled)
@@ -23,7 +23,7 @@ const getBackgroundColor = () => props => {
 };
 
 const getFontSize = () => props => {
-  if (props.small === 'true') return `font-size:${$fontSize.xxs}`;
+  if (props.small === "true") return `font-size:${$fontSize.xxs}`;
   return `font-size:${$fontSize.xs}`;
 };
 
@@ -43,7 +43,7 @@ const getBoxShadow = () => props => {
 };
 
 const getPadding = () => props =>
-  props.small === 'true' ? `padding:0.5em 2em` : `padding:1em 3em`;
+  props.small === "true" ? `padding:0.5em 2em` : `padding:1em 3em`;
 
 const getHoverBackgroundColor = () => props => {
   if (props.disabled)
@@ -73,7 +73,7 @@ const getHoverBoxShadow = () => props => {
 };
 
 const getChevron = () => props => {
-  if (props.chevron === 'true')
+  if (props.chevron === "true")
     return `&:after {
     content: '\\203A';
     font-size:1.5em;
@@ -93,7 +93,7 @@ const buttonStyles = () => props => css`
   diplay: inline;
   justify-content: center;
   align-items: center;
-  ${() => props.fluid && 'width: 100%'};
+  ${() => props.fluid && "width: 100%"};
   ${getPadding()};
   ${getBoxShadow()};
   ${getFontSize()};
@@ -147,7 +147,7 @@ export const AnchorLinkButton = styled.a<ButtonProps>`
 `;
 
 const Button = styled.button<ButtonProps>`
-  ${buttonStyles()}
+  ${buttonStyles()};
 `;
 
 export const ButtonLink = styled(Link)<ButtonProps>`
