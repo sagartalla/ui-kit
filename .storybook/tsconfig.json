@@ -17,7 +17,7 @@
     "strictNullChecks": true,
     "declaration": true
   },
-  "include": ["src/**/*"],
+  "include": ["packages/**/*", ".storybook/welcomeStory.tsx"],
   "exclude": [
     "node_modules",
     "build",

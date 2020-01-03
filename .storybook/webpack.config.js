@@ -1,10 +1,11 @@
 const path = require("path");
 const SRC_PATH = path.join(__dirname, "../packages");
+const WELCOME_STORY_PATH = path.join(__dirname, "./");
 
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    include: [SRC_PATH],
+    include: [SRC_PATH, WELCOME_STORY_PATH],
     use: [
       {
         loader: require.resolve("awesome-typescript-loader"),
