@@ -49,35 +49,55 @@ storiesOf("Button", module)
     ),
     { notes: "A very simple component" }
   )
-  .add("Button Text", () => <ButtonText>Click Me!</ButtonText>)
-  .add("Button Link", () => <ButtonLink to="/new-link">Link</ButtonLink>)
+  .add("Button Text", () => (
+    <ButtonText
+      small={text("Small", "false")}
+      onClick={action("clicked button")}
+    >
+      Click Me!
+    </ButtonText>
+  ))
+  .add("Button Link", () => (
+    <ButtonLink
+      to="/new-link"
+      fluid={boolean("Fluid", false)}
+      small={text("Small", "false")}
+      invert={boolean("Invert", false)}
+      disabled={boolean("Disabled", false)}
+      chevron={text("Chevron", "false")}
+      onClick={action("clicked button")}
+    >
+      Link
+    </ButtonLink>
+  ))
   .add("Anchor Link Button", () => (
-    <AnchorLinkButton>Hello Button</AnchorLinkButton>
+    <AnchorLinkButton
+      fluid={boolean("Fluid", false)}
+      small={text("Small", "false")}
+      invert={boolean("Invert", false)}
+      disabled={boolean("Disabled", false)}
+      chevron={text("Chevron", "false")}
+      onClick={action("clicked button")}
+    >
+      Hello Button
+    </AnchorLinkButton>
   ))
   .add("Hyper Anchor Link Button", () => (
-    <HyperAnchorLink>Click Me!</HyperAnchorLink>
+    <HyperAnchorLink
+      small={text("Small", "false")}
+      chevron={text("Chevron", "false")}
+      onClick={action("clicked button")}
+    >
+      Click Me!
+    </HyperAnchorLink>
   ))
-  .add("HyperLink button", () => <HyperLink to="/new-link">Link</HyperLink>);
-
-// storiesOf("Button")
-//   .addDecorator(withKnobs)
-//   .addDecorator(withNotes)
-//   .add(
-//     "with text",
-//     () => (
-//       <Button
-//         disabled={boolean("Disabled", false)}
-//         onClick={action("clicked button")}
-//       >
-//         Hello Button
-//       </Button>
-//     ),
-//     { notes: "A very simple component" }
-//   )
-//   .add("with some emoji", () => (
-//     <Button>
-//       <span role="img" aria-label="so cool">
-//         😀 😎 👍 💯
-//       </span>
-//     </Button>
-//   ));
+  .add("HyperLink button", () => (
+    <HyperLink
+      to="/new-link"
+      small={text("Small", "false")}
+      chevron={text("Chevron", "false")}
+      onClick={action("clicked button")}
+    >
+      Link
+    </HyperLink>
+  ));
