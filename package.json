@@ -11,6 +11,7 @@
     "@storybook/addon-notes": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "@storybook/storybook-deployer": "^2.8.1",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "lerna": "3.18.3",
@@ -23,7 +24,8 @@
     "tsc": "lerna run tsc",
     "publish": "lerna run tsc && lerna publish",
     "bootstrap": "lerna bootstrap",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook"
   },
   "dependencies": {
     "react": "^16.12.0",
