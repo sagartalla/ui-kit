@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@acko-ui-kit/common": "^1.0.10",
-    "@acko-ui-kit/typography": "^1.0.7"
+    "@acko-ui-kit/typography": "^1.0.7",
+    "react": "^16.12.0"
   }
 }
