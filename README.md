@@ -32,3 +32,12 @@ npm run publish
 //.npmrc
 @acko-ui-kit:registry=http://172.31.43.156:8080/repository/npm-internal
 ```
+
+### Run StoryBook
+```
+npm i
+npm run storybook
+```
+
+Launch localhost:port
+
